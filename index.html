@@ -1,0 +1,1156 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      EcoColeta - Plataforma Inteligente para Gestão de Resíduos Urbanos.
+    </title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav class="bg-white shadow-md fixed w-full z-10">
+      <div
+        class="container mx-auto px-4 py-3 flex justify-between items-center"
+      >
+        <div class="flex items-center space-x-2">
+          <svg
+            class="w-8 h-8 text-green-500"
+            fill="currentColor"
+            viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M4 2a2 2 0 00-2 2v11a3 3 0 106 0V4a2 2 0 00-2-2H4zm1 14a1 1 0 100-2 1 1 0 000 2zm5-1.757l4.9-4.9a2 2 0 000-2.828L13.485 5.1a2 2 0 00-2.828 0L10 5.757v8.486zM16 18H9.071l6-6H16a2 2 0 012 2v2a2 2 0 01-2 2z"
+              clip-rule="evenodd"
+            ></path>
+          </svg>
+          <span class="text-xl font-bold text-gray-800">EcoColeta</span>
+        </div>
+        <div class="hidden md:flex space-x-8">
+          <a
+            href="#como-funciona"
+            class="text-gray-600 hover:text-green-500 transition"
+            >Como Funciona</a
+          >
+          <a
+            href="#beneficios"
+            class="text-gray-600 hover:text-green-500 transition"
+            >Benefícios</a
+          >
+          <a
+            href="#tecnologia"
+            class="text-gray-600 hover:text-green-500 transition"
+            >Tecnologia</a
+          >
+          <a
+            href="#resultados"
+            class="text-gray-600 hover:text-green-500 transition"
+            >Resultados</a
+          >
+        </div>
+        <div>
+          <button
+            id="accessPlatformBtn"
+            class="bg-green-500 hover:bg-green-600 text-white px-6 py-2 rounded-full font-medium transition shadow-md hover:shadow-lg"
+          >
+            Acessar Plataforma
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <section class="hero-pattern pt-28 pb-20">
+      <div class="container mx-auto px-4">
+        <div class="flex flex-col md:flex-row items-center">
+          <div class="md:w-1/2 mb-10 md:mb-0">
+            <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
+              Gestão Inteligente de Resíduos para Cidades Sustentáveis
+            </h1>
+            <p class="text-lg text-gray-600 mb-8">
+              Conectamos cidadãos, empresas e cooperativas de reciclagem para
+              tornar a coleta de resíduos mais eficiente, sustentável e
+              colaborativa.
+            </p>
+            <div
+              class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4"
+            >
+              <button
+                id="scheduleCollectionBtnHero"
+                class="gradient-bg text-white px-8 py-3 rounded-full font-medium shadow-lg hover:shadow-xl transition transform hover:-translate-y-1"
+              >
+                Agendar Coleta
+              </button>
+              <button
+                class="bg-white text-green-500 border-2 border-green-500 px-8 py-3 rounded-full font-medium hover:bg-green-50 transition"
+              >
+                Saiba Mais
+              </button>
+            </div>
+          </div>
+          <div class="md:w-1/2">
+            <div class="relative">
+              <svg
+                class="w-full h-auto"
+                viewBox="0 0 500 400"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <rect x="0" y="150" width="500" height="250" fill="#f3f4f6" />
+                <rect x="20" y="100" width="60" height="300" fill="#d1d5db" />
+                <rect x="30" y="120" width="15" height="20" fill="#60a5fa" />
+                <rect x="55" y="120" width="15" height="20" fill="#60a5fa" />
+                <rect x="30" y="150" width="15" height="20" fill="#60a5fa" />
+                <rect x="55" y="150" width="15" height="20" fill="#60a5fa" />
+                <rect x="30" y="180" width="15" height="20" fill="#60a5fa" />
+                <rect x="55" y="180" width="15" height="20" fill="#60a5fa" />
+                <rect x="100" y="150" width="80" height="250" fill="#9ca3af" />
+                <rect x="115" y="170" width="15" height="20" fill="#60a5fa" />
+                <rect x="145" y="170" width="15" height="20" fill="#60a5fa" />
+                <rect x="115" y="200" width="15" height="20" fill="#60a5fa" />
+                <rect x="145" y="200" width="15" height="20" fill="#60a5fa" />
+                <rect x="115" y="230" width="15" height="20" fill="#60a5fa" />
+                <rect x="145" y="230" width="15" height="20" fill="#60a5fa" />
+                <rect x="200" y="120" width="70" height="280" fill="#d1d5db" />
+                <rect x="215" y="140" width="15" height="20" fill="#60a5fa" />
+                <rect x="240" y="140" width="15" height="20" fill="#60a5fa" />
+                <rect x="215" y="170" width="15" height="20" fill="#60a5fa" />
+                <rect x="240" y="170" width="15" height="20" fill="#60a5fa" />
+                <rect x="215" y="200" width="15" height="20" fill="#60a5fa" />
+                <rect x="240" y="200" width="15" height="20" fill="#60a5fa" />
+                <rect x="290" y="180" width="90" height="220" fill="#9ca3af" />
+                <rect x="310" y="200" width="15" height="20" fill="#60a5fa" />
+                <rect x="340" y="200" width="15" height="20" fill="#60a5fa" />
+                <rect x="310" y="230" width="15" height="20" fill="#60a5fa" />
+                <rect x="340" y="230" width="15" height="20" fill="#60a5fa" />
+                <rect x="310" y="260" width="15" height="20" fill="#60a5fa" />
+                <rect x="340" y="260" width="15" height="20" fill="#60a5fa" />
+                <rect x="400" y="150" width="80" height="250" fill="#d1d5db" />
+                <rect x="415" y="170" width="15" height="20" fill="#60a5fa" />
+                <rect x="445" y="170" width="15" height="20" fill="#60a5fa" />
+                <rect x="415" y="200" width="15" height="20" fill="#60a5fa" />
+                <rect x="445" y="200" width="15" height="20" fill="#60a5fa" />
+                <rect x="415" y="230" width="15" height="20" fill="#60a5fa" />
+                <rect x="445" y="230" width="15" height="20" fill="#60a5fa" />
+                <rect x="0" y="350" width="500" height="30" fill="#4b5563" />
+                <rect
+                  x="0"
+                  y="363"
+                  width="500"
+                  height="4"
+                  fill="#f3f4f6"
+                  stroke-dasharray="10,10"
+                />
+                <g transform="translate(350, 330)" class="truck">
+                  <rect
+                    x="0"
+                    y="0"
+                    width="60"
+                    height="25"
+                    rx="5"
+                    fill="#2ecc71"
+                  />
+                  <rect
+                    x="60"
+                    y="10"
+                    width="25"
+                    height="15"
+                    rx="2"
+                    fill="#27ae60"
+                  />
+                  <circle cx="15" cy="25" r="7" fill="#1f2937" />
+                  <circle cx="15" cy="25" r="3" fill="#9ca3af" />
+                  <circle cx="70" cy="25" r="7" fill="#1f2937" />
+                  <circle cx="70" cy="25" r="3" fill="#9ca3af" />
+                  <rect
+                    x="5"
+                    y="-10"
+                    width="40"
+                    height="10"
+                    rx="2"
+                    fill="#34d399"
+                  />
+                  <text
+                    x="30"
+                    y="15"
+                    font-size="10"
+                    text-anchor="middle"
+                    fill="white"
+                    font-weight="bold"
+                  >
+                    ECO
+                  </text>
+                </g>
+                <g transform="translate(100, 330)">
+                  <rect
+                    x="0"
+                    y="0"
+                    width="15"
+                    height="20"
+                    rx="2"
+                    fill="#3b82f6"
+                  />
+                  <rect
+                    x="20"
+                    y="0"
+                    width="15"
+                    height="20"
+                    rx="2"
+                    fill="#ef4444"
+                  />
+                  <rect
+                    x="40"
+                    y="0"
+                    width="15"
+                    height="20"
+                    rx="2"
+                    fill="#f59e0b"
+                  />
+                  <rect
+                    x="60"
+                    y="0"
+                    width="15"
+                    height="20"
+                    rx="2"
+                    fill="#10b981"
+                  />
+                </g>
+                <g transform="translate(250, 80)">
+                  <circle cx="0" cy="0" r="40" fill="#2ecc71" opacity="0.9" />
+                  <path
+                    d="M-15,-5 L0,-25 L15,-5 L5,-5 L5,15 L-5,15 L-5,-5 Z"
+                    fill="white"
+                  />
+                  <path
+                    d="M5,5 L25,15 L15,30 L5,20 L-15,25 L-20,15 L5,5 Z"
+                    fill="white"
+                  />
+                  <path
+                    d="M-5,5 L-25,15 L-15,30 L-5,20 L15,25 L20,15 L-5,5 Z"
+                    fill="white"
+                  />
+                </g>
+                <animateTransform
+                  xlink:href=".truck"
+                  attributeName="transform"
+                  type="translate"
+                  from="-100 330"
+                  to="500 330"
+                  dur="10s"
+                  repeatCount="indefinite"
+                />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-white py-16">
+      <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div
+            class="bg-green-50 p-8 rounded-xl text-center shadow-md hover:shadow-lg transition"
+          >
+            <div class="text-green-500 mb-4">
+              <svg
+                class="w-12 h-12 mx-auto"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M9 6a3 3 0 11-6 0 3 3 0 016 0zM17 6a3 3 0 11-6 0 3 3 0 016 0zM12.93 17c.046-.327.07-.66.07-1a6.97 6.97 0 00-1.5-4.33A5 5 0 0119 16v1h-6.07zM6 11a5 5 0 015 5v1H1v-1a5 5 0 015-5z"
+                ></path>
+              </svg>
+            </div>
+            <h3
+              id="statsActiveUsers"
+              class="text-3xl font-bold text-gray-800 mb-2"
+            >
+              0+
+            </h3>
+            <p class="text-gray-600">Usuários Ativos</p>
+          </div>
+          <div
+            class="bg-green-50 p-8 rounded-xl text-center shadow-md hover:shadow-lg transition"
+          >
+            <div class="text-green-500 mb-4">
+              <svg
+                class="w-12 h-12 mx-auto"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M4 2a1 1 0 011 1v2.101a7.002 7.002 0 0111.601 2.566 1 1 0 11-1.885.666A5.002 5.002 0 005.999 7H9a1 1 0 010 2H4a1 1 0 01-1-1V3a1 1 0 011-1zm.008 9.057a1 1 0 011.276.61A5.002 5.002 0 0014.001 13H11a1 1 0 110-2h5a1 1 0 011 1v5a1 1 0 11-2 0v-2.101a7.002 7.002 0 01-11.601-2.566 1 1 0 01.61-1.276z"
+                  clip-rule="evenodd"
+                ></path>
+              </svg>
+            </div>
+            <h3
+              id="statsWasteRecycled"
+              class="text-3xl font-bold text-gray-800 mb-2"
+            >
+              0 ton
+            </h3>
+            <p class="text-gray-600">Resíduos Reciclados Mensalmente</p>
+          </div>
+          <div
+            class="bg-green-50 p-8 rounded-xl text-center shadow-md hover:shadow-lg transition"
+          >
+            <div class="text-green-500 mb-4">
+              <svg
+                class="w-12 h-12 mx-auto"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"
+                  clip-rule="evenodd"
+                ></path>
+              </svg>
+            </div>
+            <h3
+              id="statsPartnerCooperatives"
+              class="text-3xl font-bold text-gray-800 mb-2"
+            >
+              0
+            </h3>
+            <p class="text-gray-600">Cooperativas Parceiras (simulado)</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="como-funciona" class="py-16 bg-gray-50">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl font-bold text-gray-800 mb-4">Como Funciona</h2>
+          <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+            Nossa plataforma conecta todos os envolvidos no ciclo de reciclagem,
+            tornando o processo mais eficiente e acessível.
+          </p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div
+            class="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition"
+          >
+            <div
+              class="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mb-6"
+            >
+              <svg
+                class="w-8 h-8 text-green-500"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M8 9a3 3 0 100-6 3 3 0 000 6zM8 11a6 6 0 016 6H2a6 6 0 016-6zM16 7a1 1 0 10-2 0v1h-1a1 1 0 100 2h1v1a1 1 0 102 0v-1h1a1 1 0 100-2h-1V7z"
+                ></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold text-gray-800 mb-3">
+              1. Cadastro
+            </h3>
+            <p class="text-gray-600">
+              Cidadãos e empresas se cadastram na plataforma.
+              <button id="registerUserBtn" class="text-green-500 underline">
+                Cadastre-se aqui
+              </button>
+            </p>
+          </div>
+          <div
+            class="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition"
+          >
+            <div
+              class="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mb-6"
+            >
+              <svg
+                class="w-8 h-8 text-green-500"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z"
+                  clip-rule="evenodd"
+                ></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold text-gray-800 mb-3">
+              2. Agendamento
+            </h3>
+            <p class="text-gray-600">
+              Usuários agendam a coleta de seus materiais recicláveis.
+              <button
+                id="scheduleCollectionBtn"
+                class="text-green-500 underline"
+              >
+                Agendar agora
+              </button>
+            </p>
+          </div>
+          <div
+            class="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition"
+          >
+            <div
+              class="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mb-6"
+            >
+              <svg
+                class="w-8 h-8 text-green-500"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"
+                  clip-rule="evenodd"
+                ></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold text-gray-800 mb-3">
+              3. Visualização no Mapa
+            </h3>
+            <p class="text-gray-600">
+              Cooperativas e catadores (simulado: você) visualizam as
+              solicitações em um
+              <a href="#map-section" class="text-green-500 underline"
+                >mapa interativo</a
+              >.
+            </p>
+          </div>
+          <div
+            class="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition"
+          >
+            <div
+              class="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mb-6"
+            >
+              <svg
+                class="w-8 h-8 text-green-500"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M8 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM15 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0z"
+                ></path>
+                <path
+                  d="M3 4a1 1 0 00-1 1v10a1 1 0 001 1h1.05a2.5 2.5 0 014.9 0H10a1 1 0 001-1V5a1 1 0 00-1-1H3zM14 7a1 1 0 00-1 1v6.05A2.5 2.5 0 0115.95 16H17a1 1 0 001-1v-5a1 1 0 00-.293-.707l-2-2A1 1 0 0015 7h-1z"
+                ></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold text-gray-800 mb-3">4. Coleta</h3>
+            <p class="text-gray-600">
+              Os materiais são coletados no horário agendado, garantindo
+              eficiência e pontualidade no processo.
+            </p>
+          </div>
+          <div
+            class="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition"
+          >
+            <div
+              class="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mb-6"
+            >
+              <svg
+                class="w-8 h-8 text-green-500"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z"
+                  clip-rule="evenodd"
+                ></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold text-gray-800 mb-3">
+              5. Rastreamento
+            </h3>
+            <p class="text-gray-600">
+              Usuários podem acompanhar todo o processo (simulado: status da
+              coleta).
+            </p>
+          </div>
+          <div
+            class="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition"
+          >
+            <div
+              class="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mb-6"
+            >
+              <svg
+                class="w-8 h-8 text-green-500"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M2 10.5a1.5 1.5 0 113 0v6a1.5 1.5 0 01-3 0v-6zM6 10.333v5.43a2 2 0 001.106 1.79l.05.025A4 4 0 008.943 18h5.416a2 2 0 001.962-1.608l1.2-6A2 2 0 0015.56 8H12V4a2 2 0 00-2-2 1 1 0 00-1 1v.667a4 4 0 01-.8 2.4L6.8 7.933a4 4 0 00-.8 2.4z"
+                ></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold text-gray-800 mb-3">
+              6. Recompensas
+            </h3>
+            <p class="text-gray-600">
+              Usuários recebem pontos por suas contribuições. Você tem
+              <span id="userPoints" class="font-bold">0</span> pontos.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="map-section" class="py-16 bg-white">
+      <div class="container mx-auto px-4">
+        <div class="flex flex-col md:flex-row items-center">
+          <div class="md:w-1/2 mb-10 md:mb-0 md:pr-8">
+            <h2 class="text-3xl font-bold text-gray-800 mb-6">
+              Mapa Interativo de Coleta (Simulado)
+            </h2>
+            <p class="text-lg text-gray-600 mb-6">
+              Visualize os pontos de coleta agendados. Clique em um ponto para
+              ver detalhes (simulado).
+            </p>
+            <ul class="space-y-4">
+              <li class="flex items-center">
+                <div class="w-6 h-6 rounded-full bg-red-500 mr-3"></div>
+                <span class="text-gray-700">Pontos de descarte irregular</span>
+              </li>
+              <li class="flex items-center">
+                <div class="w-6 h-6 rounded-full bg-green-500 mr-3"></div>
+                <span class="text-gray-700">Pontos de coleta agendada</span>
+              </li>
+              <li class="flex items-center">
+                <div class="w-6 h-6 rounded-full bg-blue-500 mr-3"></div>
+                <span class="text-gray-700">Cooperativas e centros</span>
+              </li>
+            </ul>
+            <button
+              id="addIrregularPointBtn"
+              class="mt-4 bg-yellow-500 hover:bg-yellow-600 text-white px-4 py-2 rounded-full font-medium transition"
+            >
+              Adicionar Ponto Irregular
+            </button>
+            <button
+              id="addCooperativeBtn"
+              class="mt-4 bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-full font-medium transition"
+            >
+              Adicionar Cooperativa
+            </button>
+          </div>
+          <div class="md:w-1/2">
+            <div class="map-container bg-gray-100 h-96 shadow-lg">
+              <svg
+                id="interactiveMapSVG"
+                width="100%"
+                height="100%"
+                viewBox="0 0 600 400"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <rect x="0" y="0" width="600" height="400" fill="#f3f4f6" />
+                <path d="M0,200 L600,200" stroke="#d1d5db" stroke-width="20" />
+                <path d="M300,0 L300,400" stroke="#d1d5db" stroke-width="20" />
+                <path
+                  d="M150,100 L450,100"
+                  stroke="#d1d5db"
+                  stroke-width="10"
+                />
+                <path
+                  d="M150,300 L450,300"
+                  stroke="#d1d5db"
+                  stroke-width="10"
+                />
+                <path d="M100,50 L100,350" stroke="#d1d5db" stroke-width="10" />
+                <path d="M500,50 L500,350" stroke="#d1d5db" stroke-width="10" />
+                <rect x="50" y="50" width="30" height="30" fill="#9ca3af" />
+                <rect x="120" y="40" width="40" height="40" fill="#9ca3af" />
+                <rect x="200" y="30" width="50" height="50" fill="#9ca3af" />
+                <rect x="350" y="30" width="50" height="50" fill="#9ca3af" />
+                <rect x="450" y="40" width="40" height="40" fill="#9ca3af" />
+                <rect x="520" y="50" width="30" height="30" fill="#9ca3af" />
+                <rect x="50" y="320" width="30" height="30" fill="#9ca3af" />
+                <rect x="120" y="320" width="40" height="40" fill="#9ca3af" />
+                <rect x="200" y="320" width="50" height="50" fill="#9ca3af" />
+                <rect x="350" y="320" width="50" height="50" fill="#9ca3af" />
+                <rect x="450" y="320" width="40" height="40" fill="#9ca3af" />
+                <rect x="520" y="320" width="30" height="30" fill="#9ca3af" />
+                <circle cx="400" cy="150" r="30" fill="#10b981" opacity="0.3" />
+                <circle cx="200" cy="250" r="30" fill="#10b981" opacity="0.3" />
+                <g id="mapMarkersGroup"></g>
+                <path
+                  class="map-route original-route"
+                  d="M300,200 L350,150 L400,150 L450,200 L500,200"
+                  stroke="#3498db"
+                  stroke-width="3"
+                  opacity="0.7"
+                  style="transform-origin: center"
+                />
+                <path
+                  class="map-route original-route"
+                  d="M300,200 L250,250 L200,250 L150,200 L100,200"
+                  stroke="#3498db"
+                  stroke-width="3"
+                  opacity="0.7"
+                  style="transform-origin: center"
+                />
+                <g transform="translate(300, 200)" class="original-truck-1">
+                  <rect
+                    x="-15"
+                    y="-7.5"
+                    width="30"
+                    height="15"
+                    rx="3"
+                    fill="#2ecc71"
+                  />
+                  <circle cx="-8" cy="7.5" r="4" fill="#1f2937" />
+                  <circle cx="8" cy="7.5" r="4" fill="#1f2937" />
+                  <animateTransform
+                    attributeName="transform"
+                    type="translate"
+                    from="300,200"
+                    to="500,200"
+                    dur="5s"
+                    repeatCount="indefinite"
+                  />
+                </g>
+                <g transform="translate(300, 200)" class="original-truck-2">
+                  <rect
+                    x="-15"
+                    y="-7.5"
+                    width="30"
+                    height="15"
+                    rx="3"
+                    fill="#3b82f6"
+                  />
+                  <circle cx="-8" cy="7.5" r="4" fill="#1f2937" />
+                  <circle cx="8" cy="7.5" r="4" fill="#1f2937" />
+                  <animateTransform
+                    attributeName="transform"
+                    type="translate"
+                    from="300,200"
+                    to="100,200"
+                    dur="5s"
+                    repeatCount="indefinite"
+                    begin="2.5s"
+                  />
+                </g>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="beneficios" class="py-16 bg-green-50">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl font-bold text-gray-800 mb-4">Benefícios</h2>
+          <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+            Nossa plataforma traz vantagens para todos os envolvidos no ciclo de
+            reciclagem, promovendo sustentabilidade e eficiência.
+          </p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div
+            class="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition"
+          >
+            <div class="text-green-500 mb-4">
+              <svg
+                class="w-12 h-12"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M4.083 9h1.946c.089-1.546.383-2.97.837-4.118A6.004 6.004 0 004.083 9zM10 2a8 8 0 100 16 8 8 0 000-16zm0 2c-.076 0-.232.032-.465.262-.238.234-.497.623-.737 1.182-.389.907-.673 2.142-.766 3.556h3.936c-.093-1.414-.377-2.649-.766-3.556-.24-.56-.5-.948-.737-1.182C10.232 4.032 10.076 4 10 4zm3.971 5c-.089-1.546-.383-2.97-.837-4.118A6.004 6.004 0 0115.917 9h-1.946zm-2.003 2H8.032c.093 1.414.377 2.649.766 3.556.24.56.5.948.737 1.182.233.23.389.262.465.262.076 0 .232-.032.465-.262.238-.234.498-.623.737-1.182.389-.907.673-2.142.766-3.556zm1.166 4.118c.454-1.147.748-2.572.837-4.118h1.946a6.004 6.004 0 01-2.783 4.118zm-6.268 0C6.412 13.97 6.118 12.546 6.03 11H4.083a6.004 6.004 0 002.783 4.118z"
+                  clip-rule="evenodd"
+                ></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold text-gray-800 mb-3">
+              Impacto Ambiental
+            </h3>
+            <p class="text-gray-600">
+              Redução do descarte irregular de resíduos, diminuição da poluição
+              e preservação dos recursos naturais.
+            </p>
+          </div>
+          <div
+            class="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition"
+          >
+            <div class="text-green-500 mb-4">
+              <svg
+                class="w-12 h-12"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3zM6 8a2 2 0 11-4 0 2 2 0 014 0zM16 18v-3a5.972 5.972 0 00-.75-2.906A3.005 3.005 0 0119 15v3h-3zM4.75 12.094A5.973 5.973 0 004 15v3H1v-3a3 3 0 013.75-2.906z"
+                ></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold text-gray-800 mb-3">
+              Inclusão Social
+            </h3>
+            <p class="text-gray-600">
+              Valorização do trabalho dos catadores e cooperativas, gerando
+              renda e dignidade para esses profissionais.
+            </p>
+          </div>
+          <div
+            class="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition"
+          >
+            <div class="text-green-500 mb-4">
+              <svg
+                class="w-12 h-12"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M6 6V5a3 3 0 013-3h2a3 3 0 013 3v1h2a2 2 0 012 2v3.57A22.952 22.952 0 0110 13a22.95 22.95 0 01-8-1.43V8a2 2 0 012-2h2zm2-1a1 1 0 011-1h2a1 1 0 011 1v1H8V5zm1 5a1 1 0 011-1h.01a1 1 0 110 2H10a1 1 0 01-1-1z"
+                  clip-rule="evenodd"
+                ></path>
+                <path
+                  d="M2 13.692V16a2 2 0 002 2h12a2 2 0 002-2v-2.308A24.974 24.974 0 0110 15c-2.796 0-5.487-.46-8-1.308z"
+                ></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold text-gray-800 mb-3">
+              Economia Circular
+            </h3>
+            <p class="text-gray-600">
+              Promoção de um modelo econômico sustentável, onde os resíduos são
+              reaproveitados como matéria-prima.
+            </p>
+          </div>
+          <div
+            class="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition"
+          >
+            <div class="text-green-500 mb-4">
+              <svg
+                class="w-12 h-12"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M3 3a1 1 0 000 2v8a2 2 0 002 2h2.586l-1.293 1.293a1 1 0 101.414 1.414L10 15.414l2.293 2.293a1 1 0 001.414-1.414L12.414 15H15a2 2 0 002-2V5a1 1 0 100-2H3zm11.707 4.707a1 1 0 00-1.414-1.414L10 9.586 8.707 8.293a1 1 0 00-1.414 0l-2 2a1 1 0 101.414 1.414L8 10.414l1.293 1.293a1 1 0 001.414 0l4-4z"
+                  clip-rule="evenodd"
+                ></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold text-gray-800 mb-3">
+              Eficiência Operacional
+            </h3>
+            <p class="text-gray-600">
+              Otimização das rotas de coleta, redução de custos e aumento da
+              produtividade das cooperativas.
+            </p>
+          </div>
+          <div
+            class="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition"
+          >
+            <div class="text-green-500 mb-4">
+              <svg
+                class="w-12 h-12"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M2 11a1 1 0 011-1h2a1 1 0 011 1v5a1 1 0 01-1 1H3a1 1 0 01-1-1v-5zM8 7a1 1 0 011-1h2a1 1 0 011 1v9a1 1 0 01-1 1H9a1 1 0 01-1-1V7zM14 4a1 1 0 011-1h2a1 1 0 011 1v12a1 1 0 01-1 1h-2a1 1 0 01-1-1V4z"
+                ></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold text-gray-800 mb-3">
+              Dados Estratégicos
+            </h3>
+            <p class="text-gray-600">
+              Geração de informações valiosas para o desenvolvimento de
+              políticas públicas mais eficientes e sustentáveis.
+            </p>
+          </div>
+          <div
+            class="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition"
+          >
+            <div class="text-green-500 mb-4">
+              <svg
+                class="w-12 h-12"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M10 2a4 4 0 00-4 4v1H5a1 1 0 00-.994.89l-1 9A1 1 0 004 18h12a1 1 0 00.994-1.11l-1-9A1 1 0 0015 7h-1V6a4 4 0 00-4-4zm2 5V6a2 2 0 10-4 0v1h4zm-6 3a1 1 0 112 0 1 1 0 01-2 0zm7-1a1 1 0 100 2 1 1 0 000-2z"
+                  clip-rule="evenodd"
+                ></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold text-gray-800 mb-3">
+              Incentivos e Recompensas
+            </h3>
+            <p class="text-gray-600">
+              Sistema de pontuação que premia os usuários por suas
+              contribuições, estimulando a participação contínua.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="tecnologia" class="py-16 bg-white">
+      <div class="container mx-auto px-4">
+        <div class="flex flex-col md:flex-row items-center">
+          <div class="md:w-1/2 mb-10 md:mb-0 md:pr-8">
+            <h2 class="text-3xl font-bold text-gray-800 mb-6">
+              Tecnologia Utilizada (Simulação)
+            </h2>
+            <p class="text-lg text-gray-600 mb-8">
+              Esta simulação de plataforma utiliza tecnologias web front-end
+              para demonstrar a interatividade.
+            </p>
+            <div class="grid grid-cols-2 gap-6">
+              <div class="flex items-center">
+                <div class="bg-orange-100 p-3 rounded-full mr-4">
+                  <svg
+                    class="w-6 h-6 text-orange-500"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M12.316 3.051a1 1 0 01.633 1.265l-4 12a1 1 0 11-1.898-.632l4-12a1 1 0 011.265-.633zM5.707 6.293a1 1 0 010 1.414L3.414 10l2.293 2.293a1 1 0 11-1.414 1.414l-3-3a1 1 0 010-1.414l3-3a1 1 0 011.414 0zm8.586 0a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 11-1.414-1.414L16.586 10l-2.293-2.293a1 1 0 010-1.414z"
+                      clip-rule="evenodd"
+                    ></path>
+                  </svg>
+                </div>
+                <span class="text-gray-700 font-medium">HTML5</span>
+              </div>
+              <div class="flex items-center">
+                <div class="bg-blue-100 p-3 rounded-full mr-4">
+                  <svg
+                    class="w-6 h-6 text-blue-500"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M15 2H5a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V4a2 2 0 00-2-2zM5 4h10v2H5V4zm0 4h10v2H5V8zm0 4h5v2H5v-2z"
+                      clip-rule="evenodd"
+                      fill-rule="evenodd"
+                    ></path>
+                  </svg>
+                </div>
+                <span class="text-gray-700 font-medium">CSS3 (Tailwind)</span>
+              </div>
+              <div class="flex items-center">
+                <div class="bg-yellow-100 p-3 rounded-full mr-4">
+                  <svg
+                    class="w-6 h-6 text-yellow-500"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M2 5a2 2 0 012-2h12a2 2 0 012 2v10a2 2 0 01-2 2H4a2 2 0 01-2-2V5zm3.293 1.293a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 01-1.414-1.414L7.586 10 5.293 7.707a1 1 0 010-1.414zM11 12a1 1 0 100 2h3a1 1 0 100-2h-3z"
+                      clip-rule="evenodd"
+                    ></path>
+                  </svg>
+                </div>
+                <span class="text-gray-700 font-medium">JavaScript</span>
+              </div>
+              <div class="flex items-center">
+                <div class="bg-indigo-100 p-3 rounded-full mr-4">
+                  <svg
+                    class="w-6 h-6 text-indigo-500"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M3 12v3c0 1.657 3.134 3 7 3s7-1.343 7-3v-3c0 1.657-3.134 3-7 3s-7-1.343-7-3z"
+                    ></path>
+                    <path
+                      d="M3 7v3c0 1.657 3.134 3 7 3s7-1.343 7-3V7c0 1.657-3.134 3-7 3S3 8.657 3 7z"
+                    ></path>
+                    <path
+                      d="M17 5c0 1.657-3.134 3-7 3S3 6.657 3 5s3.134-3 7-3 7 1.343 7 3z"
+                    ></path>
+                  </svg>
+                </div>
+                <span class="text-gray-700 font-medium">LocalStorage API</span>
+              </div>
+            </div>
+          </div>
+          <div class="md:w-1/2">
+            <div class="bg-gray-800 rounded-xl p-6 shadow-xl">
+              <div class="flex items-center mb-4">
+                <div class="w-3 h-3 rounded-full bg-red-500 mr-2"></div>
+                <div class="w-3 h-3 rounded-full bg-yellow-500 mr-2"></div>
+                <div class="w-3 h-3 rounded-full bg-green-500"></div>
+              </div>
+              <div class="text-green-400 font-mono text-sm">
+                <p class="mb-2">
+                  <span class="text-blue-400">function</span>
+                  <span class="text-yellow-300">saveData</span>(<span
+                    class="text-purple-400"
+                    >key</span
+                  >, <span class="text-purple-400">value</span>) {
+                </p>
+                <p class="mb-2 pl-4">
+                  localStorage.setItem(key, JSON.stringify(value));
+                </p>
+                <p class="mb-2">}</p>
+                <p class="mb-4"></p>
+                <p class="mb-2">
+                  <span class="text-blue-400">function</span>
+                  <span class="text-yellow-300">loadData</span>(<span
+                    class="text-purple-400"
+                    >key</span
+                  >) {
+                </p>
+                <p class="mb-2 pl-4">
+                  <span class="text-blue-400">const</span> data =
+                  localStorage.getItem(key);
+                </p>
+                <p class="mb-2 pl-4">
+                  <span class="text-blue-400">return</span> data ?
+                  JSON.parse(data) : <span class="text-yellow-300">null</span>;
+                </p>
+                <p class="mb-2">}</p>
+                <p class="mb-2 pl-4">
+                  // ... inicialização e lógica da aplicação ...
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="resultados" class="py-16 bg-gray-50">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl font-bold text-gray-800 mb-4">
+            Resultados e Impacto (Simulados)
+          </h2>
+          <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+            Acompanhe como nossa plataforma (simulada) está transformando a
+            gestão de resíduos.
+          </p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+          <div
+            class="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition"
+          >
+            <h3 class="text-xl font-semibold text-gray-800 mb-6">
+              Engajamento dos Usuários (Simulado)
+            </h3>
+            <div class="h-64 relative">
+              <p class="text-center text-gray-600 pt-10">
+                Gráfico de crescimento de usuários apareceria aqui, atualizado
+                com dados do LocalStorage.
+              </p>
+              <p class="text-center text-gray-500 text-sm">
+                (Implementação do gráfico SVG dinâmico omitida por complexidade)
+              </p>
+              <div id="userGrowthChartPlaceholder"></div>
+            </div>
+          </div>
+          <div
+            class="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition"
+          >
+            <h3 class="text-xl font-semibold text-gray-800 mb-6">
+              Eficiência na Coleta (Simulado)
+            </h3>
+            <div class="h-64 relative">
+              <p class="text-center text-gray-600 pt-10">
+                Gráfico de eficiência na coleta apareceria aqui.
+              </p>
+              <p class="text-center text-gray-500 text-sm">
+                (Implementação do gráfico SVG dinâmico omitida por complexidade)
+              </p>
+              <div id="collectionEfficiencyChartPlaceholder"></div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition"
+        >
+          <h3 class="text-xl font-semibold text-gray-800 mb-6">
+            Impacto Ambiental e Social (Simulado)
+          </h3>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="text-center">
+              <div class="relative mb-4">
+                <p
+                  class="text-4xl font-bold text-green-500"
+                  id="impactReductionIrregular"
+                >
+                  0%
+                </p>
+              </div>
+              <p class="text-gray-600">Redução no descarte irregular</p>
+            </div>
+            <div class="text-center">
+              <div class="relative mb-4">
+                <p
+                  class="text-4xl font-bold text-blue-500"
+                  id="impactCollectorIncome"
+                >
+                  0%
+                </p>
+              </div>
+              <p class="text-gray-600">Aumento na renda dos catadores</p>
+            </div>
+            <div class="text-center">
+              <div class="relative mb-4">
+                <p
+                  class="text-4xl font-bold text-yellow-500"
+                  id="impactAwareness"
+                >
+                  0%
+                </p>
+              </div>
+              <p class="text-gray-600">Aumento na conscientização</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div id="userModal" class="modal">
+      <div class="modal-content">
+        <span class="close-button" data-modal-id="userModal">&times;</span>
+        <h2 id="userModalTitle" class="text-2xl font-bold mb-4">
+          Acessar Plataforma
+        </h2>
+        <div id="userFormContainer">
+          <form id="registerForm">
+            <label for="userName" class="block mb-1">Nome:</label>
+            <input
+              type="text"
+              id="userName"
+              name="userName"
+              required
+              class="w-full p-2 border rounded mb-3"
+            />
+            <label for="userEmail" class="block mb-1">Email:</label>
+            <input
+              type="email"
+              id="userEmail"
+              name="userEmail"
+              required
+              class="w-full p-2 border rounded mb-3"
+            />
+            <button
+              type="submit"
+              class="gradient-bg text-white px-6 py-2 rounded-full font-medium"
+            >
+              Cadastrar / Entrar
+            </button>
+          </form>
+        </div>
+        <div id="welcomeMessage" class="hidden">
+          <p id="welcomeText" class="text-lg"></p>
+          <p>
+            Seus pontos: <span id="modalUserPoints" class="font-bold">0</span>
+          </p>
+          <button
+            id="logoutBtn"
+            class="mt-4 bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded-full"
+          >
+            Sair
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div id="collectionModal" class="modal">
+      <div class="modal-content">
+        <span class="close-button" data-modal-id="collectionModal"
+          >&times;</span
+        >
+        <h2 class="text-2xl font-bold mb-4">Agendar Coleta</h2>
+        <form id="collectionForm">
+          <label for="materialType" class="block mb-1">Tipo de Material:</label>
+          <input
+            type="text"
+            id="materialType"
+            name="materialType"
+            placeholder="Ex: Plástico, Papelão"
+            required
+            class="w-full p-2 border rounded mb-3"
+          />
+          <label for="collectionAddress" class="block mb-1"
+            >Endereço (simulado):</label
+          >
+          <input
+            type="text"
+            id="collectionAddress"
+            name="collectionAddress"
+            placeholder="Ex: Rua Exemplo, 123"
+            required
+            class="w-full p-2 border rounded mb-3"
+          />
+          <label for="collectionDate" class="block mb-1">Data e Hora:</label>
+          <input
+            type="datetime-local"
+            id="collectionDate"
+            name="collectionDate"
+            required
+            class="w-full p-2 border rounded mb-3"
+          />
+          <label for="collectionQuantity" class="block mb-1"
+            >Quantidade Estimada (kg):</label
+          >
+          <input
+            type="number"
+            id="collectionQuantity"
+            name="collectionQuantity"
+            min="1"
+            placeholder="Ex: 5"
+            required
+            class="w-full p-2 border rounded mb-3"
+          />
+          <button
+            type="submit"
+            class="gradient-bg text-white px-6 py-2 rounded-full font-medium"
+          >
+            Confirmar Agendamento
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <footer class="gradient-bg text-white py-10 text-center">
+      <p>
+        &copy; 2024-2025 EcoColeta. Transformando o futuro da gestão de
+        resíduos.
+      </p>
+      <p class="text-sm mt-2">Esta é uma simulação com LocalStorage.</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
