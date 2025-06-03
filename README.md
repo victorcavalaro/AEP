@@ -1,7 +1,7 @@
 # AEP
 AEP - Analise e desenvolvimento de sistemas 5º semestre turma B Noturno
 
-# EcoColeta - Plataforma Inteligente para Gestão de Resíduos Urbanos (Simulação Front-end)
+# EcoColeta - Plataforma Inteligente para Gestão de Resíduos Urbanos.
 
 ## 1. Introdução
 
